@@ -116,3 +116,24 @@ function clickSpans(spans) {
 
 animeBack();
 clickSpans(spans);
+
+
+
+anime({
+    targets: '.svg path',
+    strokeDashoffset: [anime.setDashoffset, 0],
+    easing: 'easeInOutSine',
+    duration: 500,
+    endDelay: 2000,
+    delay: function(el, i) { return i * 550 },
+    direction: 'alternate',
+    loop: true,
+  });
+
+anime({
+    targets: '.svg2 path',
+    strokeDashoffset: [anime.setDashoffset, 0],
+    duration: 1000,
+    endDelay: 2000,
+    delay: function(el, i) { return i * 250 },
+  });
